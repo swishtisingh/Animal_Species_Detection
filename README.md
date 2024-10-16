@@ -51,21 +51,21 @@ You can either use your dataset or download one like the [Animal Faces dataset](
 To run inference on an image, use the detection script:
 ```bash
 python detect.py --image-path path_to_image --model model.h5
-This will output the predicted species label and display the image with the label.
-
-Web App
+```
+##Web App
 
 You can also use the Streamlit-based web app for interactive species detection:
 
-Run the app:
-bash
-Copy code
+1. Run the app:
+```bash
 streamlit run app.py
-Upload an image using the web interface and get real-time species detection results.
-Project Structure
+```
+2. Upload an image using the web interface and get real-time species detection results.
 
-bash
-Copy code
+##Project Structure
+
+```bash
+
 ├── app.py              # Streamlit web app
 ├── detect.py           # Script for running inference on images
 ├── train.py            # Model training script
@@ -74,15 +74,17 @@ Copy code
 ├── models/             # Directory for saving trained models
 ├── requirements.txt    # Required Python libraries
 └── README.md           # Project documentation
-Future Improvements
+```
+##Future Improvements
 
-Add support for more animal species.
-Integrate object detection for detecting multiple animals in a single image.
-Improve model accuracy with hyperparameter tuning and data augmentation.
-Contributing
+-Add support for more animal species.
+-Integrate object detection for detecting multiple animals in a single image.
+-Improve model accuracy with hyperparameter tuning and data augmentation.
+
+##Contributing
 
 Contributions are welcome! Feel free to submit pull requests for improvements or open issues if you encounter any bugs.
 
-License
+##License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
