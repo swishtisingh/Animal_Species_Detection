@@ -62,7 +62,7 @@ streamlit run app.py
 ```
 2. Upload an image using the web interface and get real-time species detection results.
 
-##Project Structure
+## Project Structure
 
 ```bash
 
@@ -75,16 +75,16 @@ streamlit run app.py
 ├── requirements.txt    # Required Python libraries
 └── README.md           # Project documentation
 ```
-##Future Improvements
+## Future Improvements
 
--Add support for more animal species.
--Integrate object detection for detecting multiple animals in a single image.
--Improve model accuracy with hyperparameter tuning and data augmentation.
+- Add support for more animal species.
+- Integrate object detection for detecting multiple animals in a single image.
+- Improve model accuracy with hyperparameter tuning and data augmentation.
 
-##Contributing
+## Contributing
 
 Contributions are welcome! Feel free to submit pull requests for improvements or open issues if you encounter any bugs.
 
-##License
+## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
