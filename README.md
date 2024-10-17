@@ -14,7 +14,6 @@ The aim of this project is to develop an efficient computer vision model capable
 - [Getting Started](#getting-started)
 - [Model Training](#model-training)
 - [Evaluation](#evaluation)
-- [Web App](#web-app)
 - [Contirbuting](#contributing)
 - [Author](#author)
 - 
@@ -87,84 +86,53 @@ venv\Scripts\activate
 
 ### 4. Install Dependencies
 Install the required Python libraries using the requirements.txt file:
+```bash
+pip install -r requirements.txt
+```
 
-
-
-
-
-### Prerequisites
-- Python 3.x
-- Libraries: TensorFlow, Keras, OpenCV, Streamlit, NumPy, Pandas, Matplotlib
-- You can install all the required libraries by running:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-### Installation
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/swishtisingh/Animal_Species_Detection.git
-    cd Animal_Species_Detection
-    ```
-2. Install required dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-## Dataset
-This project uses animal species image datasets, which should be structured as follows:
-You can either use your dataset or download one like the [Animal Faces dataset](https://www.kaggle.com/datasets) and place it in the `data/` directory.
+5. Run the Application
+Once all dependencies are installed, launch the Streamlit web app for real-time animal detection:
+```bash
+streamlit run './scripts/app.py'
+```
 
 ## Model Training
-1. Preprocess the dataset and train the model using:
-    ```bash
-    python train.py --dataset data/train --model-output model.h5
-    ```
-   - You can customize model parameters, such as learning rate and batch size, by adjusting the script.
-   
-2. Evaluate the model on the test set:
-    ```bash
-    python evaluate.py --dataset data/test --model model.h5
-    ```
 
-## Inference
-To run inference on an image, use the detection script:
-```bash
-python detect.py --image-path path_to_image --model model.h5
-```
-##Web App
+The model training is performed using YOLOv8 for object detection, which is known for its real-time performance and high accuracy. The configuration files for the model can be found in the config directory, and you can run the training by using the provided Jupyter notebook yolov8.ipynb.
 
-You can also use the Streamlit-based web app for interactive species detection:
+### Steps for Training:
+1. Prepare the dataset by placing images and their corresponding labels in the data/ directory.
+2. Use the train_test_split.py script to split the dataset into training and testing sets.
+3. Modify the custom.yaml file to reflect the path to the dataset.
+4. Open and run yolov8.ipynb to train the model.
 
-1. Run the app:
-```bash
-streamlit run app.py
-```
-2. Upload an image using the web interface and get real-time species detection results.
+## Evaluation
+After training the model, it is evaluated on standard object detection metrics, including Precision, Recall, and Mean Average Precision (mAP). The model performs well on both individual species detection and overall mAP scores.
 
-## Project Structure
+| Model   | Precision | Recall | F1-score | mAP@0.5 | mAP@0.5:0.95 |
+|---------|-----------|--------|----------|---------|--------------|
+| YOLOv8  |   0.944   |  0.915 |   0.93   |   0.95  |    0.804     |
 
-```bash
-
-├── app.py              # Streamlit web app
-├── detect.py           # Script for running inference on images
-├── train.py            # Model training script
-├── evaluate.py         # Model evaluation script
-├── data/               # Directory for datasets
-├── models/             # Directory for saving trained models
-├── requirements.txt    # Required Python libraries
-└── README.md           # Project documentation
-```
-## Future Improvements
-
-- Add support for more animal species.
-- Integrate object detection for detecting multiple animals in a single image.
-- Improve model accuracy with hyperparameter tuning and data augmentation.
+These results showcase the efficiency of the model in detecting wildlife in real-time scenarios.
 
 ## Contributing
 
-Contributions are welcome! Feel free to submit pull requests for improvements or open issues if you encounter any bugs.
+Contributions to this project are highly encouraged! Whether you're fixing bugs, improving documentation, or adding new features, every contribution helps. If you'd like to contribute:
+
+1. Fork the repository.
+2. Create a new branch (git checkout -b feature-branch).
+3. Make your changes.
+4. Commit and push your changes (git push origin feature-branch).
+5. Open a Pull Request on GitHub.
+Please make sure your code adheres to the PEP 8 style guidelines.
+
+## Author
+
+### Srishti Singh
+Data Scientist and Machine Learning Enthusiast
+Feel free to connect with me on [LinkedIn.](https://www.linkedin.com/in/srishti-singh-921aa52aa/)
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
+
