@@ -26,6 +26,7 @@ This project uses datasets containing labeled images of 10 animal species. Below
 - Dataset1: [African Wildlife Dataset](https://www.kaggle.com/datasets/biancaferreira/african-wildlife)
 - Dataset2: [Danger of Extinction Animal Image Set](https://www.kaggle.com/datasets/brsdincer/danger-of-extinction-animal-image-set)
 - Dataset3: [Animals Detection Images Dataset](https://www.kaggle.com/datasets/antoreepjana/animals-detection-images-dataset )
+
 These datasets provide rich diversity in backgrounds, lighting conditions, and poses, which helps the model generalize well to various real-world scenarios.
 
 ## Features
