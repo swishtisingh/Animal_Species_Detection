@@ -1,8 +1,32 @@
 
-# Animal Species Detection
+# Real-Time Animal Species Detection
 
+The aim of this project is to develop an efficient computer vision model capable of real-time wildlife detection. Leveraging state-of-the-art deep learning techniques, the model can accurately identify animal species in live video streams or images, helping researchers, conservationists, and enthusiasts monitor wildlife.
+
+<p align="center">
+  <img src="./demo/demo.gif" alt="Demo GIF">
+</p>
+
+## Table of Contents
+- [Overview](#overview)
+- [Datasets](#datasets)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Model Training](#model-training)
+- [Evaluation](#evaluation)
+- [Web App](#web-app)
+- [Contirbuting](#contributing)
+- [Author](#author)
+- 
 ## Overview
-This project focuses on detecting and classifying different animal species from images using advanced machine learning and deep learning techniques. The solution is designed to handle a variety of animal species and provides a user-friendly interface for easy use. It includes image preprocessing, feature extraction, model training, and an optional Streamlit-based web interface for real-time detection.
+The Real-Time Animal Species Detection project focuses on detecting 10 different animal species, including buffalo, cheetahs, elephants, and more, using advanced computer vision techniques. The main objective is to build a highly accurate model that runs in real-time, enabling its deployment in wildlife monitoring systems. The project uses the popular YOLO (You Only Look Once) model, which is known for its efficiency in object detection tasks. The codebase includes data preprocessing scripts, training scripts, and deployment utilities.
+
+## Datasets
+This project uses datasets containing labeled images of 10 animal species. Below are the datasets utilized, which consist of thousands of images for training and validation purposes:
+- Dataset1: [African Wildlife Dataset](https://www.kaggle.com/datasets/biancaferreira/african-wildlife)
+- Dataset2: [Danger of Extinction Animal Image Set](https://www.kaggle.com/datasets/brsdincer/danger-of-extinction-animal-image-set)
+- Dataset3: [Animals Detection Images Dataset](https://www.kaggle.com/datasets/antoreepjana/animals-detection-images-dataset )
+These datasets provide rich diversity in backgrounds, lighting conditions, and poses, which helps the model generalize well to various real-world scenarios.
 
 ## Features
 - **Preprocessing**: Image resizing, normalization, and data augmentation.
@@ -10,7 +34,62 @@ This project focuses on detecting and classifying different animal species from 
 - **Real-time Detection**: Detect species from images using a trained model.
 - **Streamlit Web App**: A simple web interface for uploading images and detecting animal species.
 
+## Project Structure
+The project follows a modular and organized structure for ease of use and collaboration. Below is the directory layout of the project:
+```bash
+    ├── config
+    │   └── custom.yaml    
+    ├── data
+    │   ├── images         
+    │   └── labels         
+    ├── logs
+    │   └── log.log      
+    ├── notebooks
+    │   └── yolov8.ipynb
+    ├── runs
+    │   └── detect
+    │       ├── train
+    │       └── val
+    ├── scripts
+    │   ├── app.py
+    │   ├── convert_format.py
+    │   └── train_test_split.py
+    ├── README.md
+    └── requirements.txt
+```
+Each directory is clearly categorized to help you quickly locate the necessary scripts and data.
+
 ## Getting Started
+Follow these steps to set up the environment and run the application locally.
+
+### 1. Fork and Clone the Repository
+First, fork the repository from GitHub and clone it to your local machine:
+```bash
+git clone https://github.com/<YOUR-USERNAME>/Animal-Species-Detection
+cd Animal-Species-Detection
+```
+### 2. Create a Virtual Environment
+Use Python's venv module to create a virtual environment:
+```bash
+python3 -m venv venv
+```
+
+### 3. Activate the Virtual Environment
+On Linux/macOS:
+```bash
+source venv/bin/activate
+```
+On Windows:
+```bash
+venv\Scripts\activate
+```
+
+### 4. Install Dependencies
+Install the required Python libraries using the requirements.txt file:
+
+
+
+
 
 ### Prerequisites
 - Python 3.x
